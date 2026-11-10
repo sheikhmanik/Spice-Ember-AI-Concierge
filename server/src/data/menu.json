@@ -1,0 +1,704 @@
+{
+  "items": [
+    {
+      "id": "starter-001",
+      "name": "Smoked Garlic Butter Naan",
+      "category": "Starters",
+      "description": "Clay oven roasted whole wheat flatbread brushed with smoked garlic butter and fresh cilantro.",
+      "price": 140,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1601051099645-23b2f39a688c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-002",
+      "name": "Woodfired Tandoori Paneer Tikka",
+      "category": "Starters",
+      "description": "Cottage cheese cubes marinated in spiced yogurt and mustard oil, charred in the clay oven with bell peppers.",
+      "price": 380,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-003",
+      "name": "Crispy Vegetable Samosas",
+      "category": "Starters",
+      "description": "Golden pastry filled with spiced potato and green peas, served with mint-tamarind chutney pair.",
+      "price": 180,
+      "dietary": "Vegan",
+      "allergens": ["Gluten"],
+      "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-004",
+      "name": "Tandoori Stuffed Mushrooms",
+      "category": "Starters",
+      "description": "Fresh button mushrooms stuffed with spiced khoya and paneer, charred over charcoal embers.",
+      "price": 340,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-005",
+      "name": "Amritsari Fish Fry",
+      "category": "Starters",
+      "description": "Crispy batter-fried river fish spiced with ajwain, black salt, and lemon juice.",
+      "price": 450,
+      "dietary": "Gluten-Free",
+      "allergens": ["Fish", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-006",
+      "name": "Achari Chicken Tikka",
+      "category": "Starters",
+      "description": "Tender chicken thigh chunks marinated in pickling spices, yogurt, and mustard oil.",
+      "price": 420,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1603894574377-6ac64c2e44c6?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-007",
+      "name": "Dahi Ke Kabab",
+      "category": "Starters",
+      "description": "Velvety hung curd patties blended with green cardamom, ginger, and cracked pepper.",
+      "price": 320,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-008",
+      "name": "Mutton Seekh Kabab",
+      "category": "Starters",
+      "description": "Minced lamb skewers infused with fresh mint, green chillies, and royal cumin.",
+      "price": 480,
+      "dietary": "Gluten-Free",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-009",
+      "name": "Tandoori Malai Broccoli",
+      "category": "Starters",
+      "description": "Broccoli florets marinated in cream, cheese, and white pepper, roasted in the tandoor.",
+      "price": 310,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-010",
+      "name": "Pudina Lachha Paratha",
+      "category": "Starters",
+      "description": "Flaky layered whole wheat bread baked with dried mint leaves and clarified butter.",
+      "price": 120,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1601051099645-23b2f39a688c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-011",
+      "name": "Tandoori Baby Potatoes",
+      "category": "Starters",
+      "description": "Hollowed baby potatoes stuffed with nuts and paneer, roasted crisp in the clay oven.",
+      "price": 290,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-012",
+      "name": "Reshmi Chicken Kabab",
+      "category": "Starters",
+      "description": "Silky smooth skewered chicken breast marinated with cashew paste and egg white.",
+      "price": 440,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1603894574377-6ac64c2e44c6?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-013",
+      "name": "Corn and Cheese Croquettes",
+      "category": "Starters",
+      "description": "Golden fried American corn and mozzarella croquettes with spicy dip.",
+      "price": 260,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-014",
+      "name": "Hara Bhara Kabab",
+      "category": "Starters",
+      "description": "Pan-seared spinach, green pea, and chana dal patties stuffed with grated cashew.",
+      "price": 270,
+      "dietary": "Vegetarian",
+      "allergens": ["Nuts"],
+      "image": "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-015",
+      "name": "Tandoori Tiger Prawns",
+      "category": "Starters",
+      "description": "Jumbo prawns marinated in Kashmiri red chili, lemon juice, and carom seed infusion.",
+      "price": 680,
+      "dietary": "Gluten-Free",
+      "allergens": ["Shellfish", "Dairy"],
+      "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-016",
+      "name": "Butter Garlic Roti",
+      "category": "Starters",
+      "description": "Whole wheat tandoori flatbread finished with roasted garlic paste and melted butter.",
+      "price": 90,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1601051099645-23b2f39a688c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-017",
+      "name": "Stuffed Paneer Kulcha",
+      "category": "Starters",
+      "description": "Leavened bread stuffed with spiced crumbled paneer and fresh herbs, baked in clay oven.",
+      "price": 160,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1601051099645-23b2f39a688c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-018",
+      "name": "Tandoori Tangri Kabab",
+      "category": "Starters",
+      "description": "Juicy chicken drumsticks marinated overnight in robust spice rub and smoked in tandoor.",
+      "price": 450,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1603894574377-6ac64c2e44c6?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-019",
+      "name": "Crispy Lotus Stem Honey Chilli",
+      "category": "Starters",
+      "description": "Crispy fried lotus stem tossed in sweet and spicy wild honey chili glaze.",
+      "price": 350,
+      "dietary": "Vegan",
+      "allergens": ["Gluten"],
+      "image": "https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "starter-020",
+      "name": "Kalmi Kabab",
+      "category": "Starters",
+      "description": "Mughlai style succulent chicken drumsticks enriched with cream, yogurt, and mace.",
+      "price": 470,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1603894574377-6ac64c2e44c6?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-001",
+      "name": "Woodfired Lamb Rogan Josh",
+      "category": "Mains",
+      "description": "Slow-braised lamb in aromatic Kashmiri chili gravy, finished in the clay oven with fresh ginger.",
+      "price": 720,
+      "dietary": "Gluten-Free",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-002",
+      "name": "Tandoori Butter Chicken",
+      "category": "Mains",
+      "description": "Succulent boneless chicken in rich tomato-cashew gravy, finished with fenugreek and cream.",
+      "price": 650,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-003",
+      "name": "Hyderabadi Dum Biryani",
+      "category": "Mains",
+      "description": "Fragrant basmati rice layered with caramelized onions, saffron, and slow-cooked whole spices.",
+      "price": 580,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-004",
+      "name": "Dal Makhani",
+      "category": "Mains",
+      "description": "Black lentils simmered overnight over slow charcoal ember, finished with churned butter and cream.",
+      "price": 420,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-005",
+      "name": "Paneer Lababdar",
+      "category": "Mains",
+      "description": "Cottage cheese cubes cooked in a rich, velvety tomato-onion gravy with capsicum and grated khoya.",
+      "price": 490,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-006",
+      "name": "Chicken Tikka Masala",
+      "category": "Mains",
+      "description": "Charred tandoori chicken chunks tossed in a spiced, vibrant tomato-onion masala.",
+      "price": 620,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-007",
+      "name": "Mutton Laal Maas",
+      "category": "Mains",
+      "description": "Fiery Rajasthani mutton curry cooked with Mathania red chilies and garlic clove reduction.",
+      "price": 750,
+      "dietary": "Gluten-Free",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-008",
+      "name": "Malai Kofta",
+      "category": "Mains",
+      "description": "Potato and paneer dumplings stuffed with dry fruits, simmered in a silky sweet onion gravy.",
+      "price": 480,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-009",
+      "name": "Goan Prawn Curry",
+      "category": "Mains",
+      "description": "Coastal prawns cooked in tangy coconut milk gravy infused with kokum and fresh curry leaves.",
+      "price": 700,
+      "dietary": "Gluten-Free",
+      "allergens": ["Shellfish"],
+      "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-010",
+      "name": "Palak Paneer",
+      "category": "Mains",
+      "description": "Fresh spinach puree cooked with garlic, cumin, and soft cubes of artisanal cottage cheese.",
+      "price": 460,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-011",
+      "name": "Kadhai Chicken",
+      "category": "Mains",
+      "description": "Stir-fried chicken pieces with chunky bell peppers, crushed coriander seeds, and tomatoes.",
+      "price": 600,
+      "dietary": "Gluten-Free",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-012",
+      "name": "Pindi Chana",
+      "category": "Mains",
+      "description": "Spiced chickpeas cooked with dry pomegranate seeds, black tea leaves, and amchur.",
+      "price": 390,
+      "dietary": "Vegan",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-013",
+      "name": "Bhindi Do Pyaza",
+      "category": "Mains",
+      "description": "Fresh tender okra tossed with double portions of crunchy sautéed onions and spices.",
+      "price": 380,
+      "dietary": "Vegan",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-014",
+      "name": "Chicken Korma",
+      "category": "Mains",
+      "description": "Royal Mughlai dish featuring chicken simmered in rich yogurt, fried onion, and nut paste.",
+      "price": 640,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-015",
+      "name": "Navratan Korma",
+      "category": "Mains",
+      "description": "Assorted nine garden vegetables and dry fruits simmered in a creamy, mildly sweet sauce.",
+      "price": 450,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-016",
+      "name": "Mushroom Matar Masala",
+      "category": "Mains",
+      "description": "Fresh button mushrooms and green peas tossed in an onion-tomato masala gravy.",
+      "price": 410,
+      "dietary": "Vegan",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-017",
+      "name": "Fish Moilee",
+      "category": "Mains",
+      "description": "Mild and fragrant Kerala style fish stew cooked in coconut milk, green chilies, and ginger.",
+      "price": 680,
+      "dietary": "Gluten-Free",
+      "allergens": ["Fish"],
+      "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-018",
+      "name": "Awadhi Chicken Biryani",
+      "category": "Mains",
+      "description": "Aromatic long-grain rice and tender chicken cooked together in sealed pot with kewra water.",
+      "price": 590,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-019",
+      "name": "Jeera Rice",
+      "category": "Mains",
+      "description": "Basmati rice tempered with roasted cumin seeds and fresh ghee.",
+      "price": 220,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-020",
+      "name": "Veg Dum Biryani",
+      "category": "Mains",
+      "description": "Seasonal vegetables and basmati rice layered with mint, saffron, and fried onions.",
+      "price": 440,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-021",
+      "name": "Egg Curry",
+      "category": "Mains",
+      "description": "Boiled eggs simmered in a spiced onion-tomato gravy with warm spices.",
+      "price": 380,
+      "dietary": "Gluten-Free",
+      "allergens": ["Egg"],
+      "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-022",
+      "name": "Shahi Paneer",
+      "category": "Mains",
+      "description": "Rich royal paneer preparation in a luscious white cashew and cream gravy.",
+      "price": 500,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-023",
+      "name": "Methi Malai Moong",
+      "category": "Mains",
+      "description": "Yellow moong lentils cooked with fresh fenugreek leaves and a touch of cream.",
+      "price": 360,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-024",
+      "name": "Keema Matar",
+      "category": "Mains",
+      "description": "Minced mutton and green peas cooked with whole spices, ginger juliennes, and tomatoes.",
+      "price": 620,
+      "dietary": "Gluten-Free",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-025",
+      "name": "Aloo Gobi Adraki",
+      "category": "Mains",
+      "description": "Potatoes and cauliflower florets tossed with julienned ginger and turmeric.",
+      "price": 340,
+      "dietary": "Vegan",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-026",
+      "name": "Sarson ka Saag",
+      "category": "Mains",
+      "description": "Traditional Punjabi mustard greens puree simmered with corn flour and ginger.",
+      "price": 410,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-027",
+      "name": "Kadhi Pakora",
+      "category": "Mains",
+      "description": "Deep-fried onion fritters submerged in a tangy spiced yogurt and gram flour curry.",
+      "price": 350,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-028",
+      "name": "Tawa Chicken Masala",
+      "category": "Mains",
+      "description": "Semi-dry chicken preparation tossed on a cast iron griddle with capsicum and onions.",
+      "price": 610,
+      "dietary": "Gluten-Free",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-029",
+      "name": "Kashmiri Pulao",
+      "category": "Mains",
+      "description": "Basmati rice cooked in milk with dry fruits, saffron, and fresh fruit garnishes.",
+      "price": 380,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "main-030",
+      "name": "Malabar Fish Curry",
+      "category": "Mains",
+      "description": "Traditional tangy fish curry made with tamarind, raw mango, and fresh coconut extract.",
+      "price": 690,
+      "dietary": "Gluten-Free",
+      "allergens": ["Fish"],
+      "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-001",
+      "name": "Warm Saffron Gulab Jamun",
+      "category": "Desserts",
+      "description": "Soft milk-solid dumplings soaked in rose-scented sugar syrup, served warm with pistachio garnish.",
+      "price": 180,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-002",
+      "name": "Cardamom Pistachio Kulfi",
+      "category": "Desserts",
+      "description": "Traditional dense frozen dairy dessert infused with green cardamom, crushed almonds, and saffron strands.",
+      "price": 210,
+      "dietary": "Gluten-Free",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-003",
+      "name": "Kesari Rasmalai",
+      "category": "Desserts",
+      "description": "Soft cottage cheese patties immersed in chilled, thickened saffron milk topped with almonds.",
+      "price": 220,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-004",
+      "name": "Moong Dal Halwa",
+      "category": "Desserts",
+      "description": "Rich, decadent yellow lentil pudding slow-cooked in pure desi ghee with cardamom and khoya.",
+      "price": 240,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-005",
+      "name": "Mango Shrikhand",
+      "category": "Desserts",
+      "description": "Strained creamy yogurt blended with Alphonso mango pulp and cardamom dust.",
+      "price": 200,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-006",
+      "name": "Gajar ka Halwa",
+      "category": "Desserts",
+      "description": "Red carrot pudding simmered in whole milk, sugar, and generous portions of ghee and nuts.",
+      "price": 210,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-007",
+      "name": "Phirni",
+      "category": "Desserts",
+      "description": "Traditional chilled ground basmati rice pudding scented with kewra and garnished with silver leaf.",
+      "price": 190,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-008",
+      "name": "Jalebi with Rabri",
+      "category": "Desserts",
+      "description": "Crispy fermented wheat pretzels soaked in sugar syrup, paired with chilled sweetened condensed milk rabri.",
+      "price": 230,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-009",
+      "name": "Malpua with Rabri",
+      "category": "Desserts",
+      "description": "Deep-fried sweet pancakes dipped in sugar syrup and served with creamy rabri.",
+      "price": 250,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Gluten"],
+      "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "dessert-010",
+      "name": "Badam Halwa",
+      "category": "Desserts",
+      "description": "Luxurious almond paste fudge slow-cooked with saffron, sugar, and pure ghee.",
+      "price": 290,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1570197788417-0e82375c9371?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-001",
+      "name": "Spiced Mango Lassi",
+      "category": "Beverages",
+      "description": "Blended yogurt drink with Alphonso mango pulp, green cardamom, and a pinch of saffron.",
+      "price": 160,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-002",
+      "name": "Masala Artisan Chai",
+      "category": "Beverages",
+      "description": "Slow-brewed Assam black tea simmered with fresh ginger, lemongrass, and aromatic whole spices.",
+      "price": 110,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-003",
+      "name": "Fresh Sweet Lime Soda",
+      "category": "Beverages",
+      "description": "Refreshing carbonated beverage made with fresh lime juice, black salt, and sugar syrup.",
+      "price": 130,
+      "dietary": "Vegan",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-004",
+      "name": "Mint Cooler Chaas",
+      "category": "Beverages",
+      "description": "Traditional spiced buttermilk churned with roasted cumin, fresh mint, and coriander.",
+      "price": 120,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-005",
+      "name": "Thandai Royale",
+      "category": "Beverages",
+      "description": "Traditional cold milk beverage blended with almonds, poppy seeds, fennel, and rose petals.",
+      "price": 190,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1571006682860-9d0b60ebfb44?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-006",
+      "name": "Fresh Tender Coconut Water",
+      "category": "Beverages",
+      "description": "Natural chilled tender coconut water served straight from the shell.",
+      "price": 140,
+      "dietary": "Vegan",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-007",
+      "name": "Rose Falooda",
+      "category": "Beverages",
+      "description": "Layered dessert drink with vermicelli, basil seeds, rose syrup, milk, and vanilla ice cream.",
+      "price": 220,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy", "Nuts"],
+      "image": "https://images.unsplash.com/photo-1571006682860-9d0b60ebfb44?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-008",
+      "name": "Cold Brew Coffee with Cardamom",
+      "category": "Beverages",
+      "description": "Smooth 18-hour steeped cold brew infused with subtle green cardamom pod notes.",
+      "price": 180,
+      "dietary": "Vegan",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-009",
+      "name": "Kala Khatta Slush",
+      "category": "Beverages",
+      "description": "Tangy blackberry and black salt crushed ice slush with a squeeze of fresh lime.",
+      "price": 150,
+      "dietary": "Vegan",
+      "allergens": [],
+      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "id": "beverage-010",
+      "name": "Classic Sweet Lassi",
+      "category": "Beverages",
+      "description": "Rich, creamy churned yogurt drink sweetened with organic khand and topped with malai.",
+      "price": 140,
+      "dietary": "Vegetarian",
+      "allergens": ["Dairy"],
+      "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=800&auto=format&fit=crop"
+    }
+  ]
+}

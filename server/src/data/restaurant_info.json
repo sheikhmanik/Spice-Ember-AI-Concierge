@@ -1,0 +1,37 @@
+{
+  "restaurant": {
+    "name": "Spice & Ember",
+    "cuisine": "Modern & Traditional Indian Culinary Artistry",
+    "tagline": "Flame-Charred Delicacies & Timeless Indian Flavors",
+    "hours": {
+      "monday_to_friday": "12:00 PM - 11:00 PM",
+      "saturday_sunday": "11:30 AM - 11:30 PM"
+    },
+    "location": {
+      "address": "45 Flame & Spice Avenue, Culinary District, Metro City",
+      "landmark": "Near Central Park Plaza",
+      "phone": "+91 98765 43210",
+      "email": "concierge@spiceandember.com"
+    },
+    "reservation_policy": {
+      "advance_booking": "Recommended for dinner and weekends, up to 14 days in advance.",
+      "cancellation": "Free cancellation up to 2 hours prior to reservation.",
+      "large_parties": "For groups larger than 8, please call concierge directly."
+    },
+    "delivery_and_takeaway": {
+      "delivery_radius": "Within 8 km radius",
+      "minimum_order": "₹300 for free delivery",
+      "estimated_time": "30-45 minutes"
+    },
+    "chef_specials_and_pairing": {
+      "signature_dishes": [
+        "Woodfired Lamb Rogan Josh (₹720)",
+        "Tandoori Butter Chicken (₹650)",
+        "Tandoori Tiger Prawns (₹680)",
+        "Hyderabadi Dum Biryani (₹580)",
+        "Dal Makhani (₹420)"
+      ],
+      "chef_recommendations": "Pair rich curries like Tandoori Butter Chicken or Lamb Rogan Josh with Smoked Garlic Butter Naan or Pudina Lachha Paratha. Finish your meal with Warm Saffron Gulab Jamun paired with Cardamom Pistachio Kulfi or Thandai Royale."
+    }
+  }
+}
