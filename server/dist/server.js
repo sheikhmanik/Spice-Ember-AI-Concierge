@@ -10,8 +10,9 @@ const menu_routes_1 = require("./routes/menu.routes");
 const chat_routes_1 = require("./routes/chat.routes");
 const app = (0, fastify_1.default)({ logger: true });
 app.register(cors_1.default, {
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: true, // Allows requests from Vercel frontend and local development
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 });
 app.register(menu_routes_1.menuRoutes);
 app.register(chat_routes_1.chatRoutes);

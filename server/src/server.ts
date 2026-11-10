@@ -7,8 +7,9 @@ import { chatRoutes } from "./routes/chat.routes";
 const app = Fastify({ logger: true });
 
 app.register(cors, {
-  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  origin: true, // Allows requests from Vercel frontend and local development
   credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 });
 
 
