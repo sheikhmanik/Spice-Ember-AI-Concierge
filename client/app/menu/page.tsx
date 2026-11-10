@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { CategoryFilter } from "@/components/CategoryFilter";
 import { MenuCard } from "@/components/MenuCard";
 import { ChatWidget } from "@/components/ChatWidget";
+import { API_BASE_URL } from "@/lib/api";
 
 interface MenuItem {
   id: string;
@@ -32,7 +33,7 @@ export default function MenuPage() {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/menu");
+        const response = await fetch(`${API_BASE_URL}/api/menu`);
         if (!response.ok) {
           throw new Error("Failed to fetch menu data.");
         }

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef, FormEvent } from "react";
+import { API_BASE_URL } from "@/lib/api";
 
 interface Message {
   sender: "user" | "bot";
@@ -41,14 +42,7 @@ export function ChatWidget() {
     setCurrentHistory(newHistory);
   
     try {
-      // Use HTTPS in production to avoid Safari mixed-content blocking.
-      // Falls back to localhost for local development only.
-      const apiUrl =
-        process.env.NEXT_PUBLIC_API_URL ||
-        (typeof window !== "undefined" && window.location.protocol === "https:"
-          ? "https://localhost:4000"
-          : "http://localhost:4000");
-      const res = await fetch(`${apiUrl}/api/chat`, {
+      const res = await fetch(`${API_BASE_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

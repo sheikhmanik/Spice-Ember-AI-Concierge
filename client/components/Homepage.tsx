@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { API_BASE_URL } from "@/lib/api";
 
 export default function Homepage() {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -20,8 +21,7 @@ export default function Homepage() {
     setIsLoading(true);
 
     try {
-      // Connects to your RAG backend endpoint later
-      const response = await fetch("/api/chat", {
+      const response = await fetch(`${API_BASE_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ query: userMsg }),
