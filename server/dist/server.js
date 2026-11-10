@@ -6,14 +6,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv/config");
 const fastify_1 = __importDefault(require("fastify"));
 const cors_1 = __importDefault(require("@fastify/cors"));
-const prisma_1 = __importDefault(require("./plugins/prisma"));
 const menu_routes_1 = require("./routes/menu.routes");
+const chat_routes_1 = require("./routes/chat.routes");
 const app = (0, fastify_1.default)({ logger: true });
 app.register(cors_1.default, {
-    origin: "http://localhost:3000",
+    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    credentials: true,
 });
-app.register(prisma_1.default);
 app.register(menu_routes_1.menuRoutes);
+app.register(chat_routes_1.chatRoutes);
 app.get("/", async () => {
     return { message: "Server is running 🚀" };
 });

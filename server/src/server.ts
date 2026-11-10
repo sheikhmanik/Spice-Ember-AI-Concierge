@@ -1,7 +1,6 @@
 import "dotenv/config";
 import Fastify from "fastify";
 import cors from "@fastify/cors";
-import prismaPlugin from "./plugins/prisma";
 import { menuRoutes } from "./routes/menu.routes";
 import { chatRoutes } from "./routes/chat.routes";
 
@@ -12,8 +11,6 @@ app.register(cors, {
   credentials: true,
 });
 
-
-app.register(prismaPlugin);
 
 app.register(menuRoutes);
 app.register(chatRoutes);
