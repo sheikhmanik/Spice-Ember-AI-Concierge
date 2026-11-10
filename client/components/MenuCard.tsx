@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const PLACEHOLDER_IMAGE = "/images/placeholders/food-placeholder.jpg";
-
 interface MenuItem {
   id: string;
   name: string;
@@ -37,15 +35,13 @@ export function MenuCard({
   ];
 
   const [imgIndex, setImgIndex] = useState(0);
-  const [imgSrc, setImgSrc] = useState(availableImages[0] || PLACEHOLDER_IMAGE);
+  const [imgError, setImgError] = useState(false);
 
   const handleImageError = () => {
     if (imgIndex < availableImages.length - 1) {
-      const nextIndex = imgIndex + 1;
-      setImgIndex(nextIndex); // Try next image in the array
-      setImgSrc(availableImages[nextIndex]);
-    } else if (imgSrc !== PLACEHOLDER_IMAGE) {
-      setImgSrc(PLACEHOLDER_IMAGE); // If all images fail, fall back to the placeholder image
+      setImgIndex(prev => prev + 1); // Try next image in the array
+    } else {
+      setImgError(true); // If all images fail, fall back to the SVG food icon
     }
   };
 
@@ -53,14 +49,34 @@ export function MenuCard({
     <div className="p-5 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between gap-4 hover:border-amber-500/30 transition shadow-lg">
       <div className="space-y-3">
         <div className="relative aspect-video rounded-lg bg-slate-800/80 overflow-hidden border border-slate-700/50">
-          <Image
-            src={imgSrc}
-            alt={name}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            onError={handleImageError}
-            className="object-cover hover:scale-105 transition duration-300"
-          />
+          {!imgError && availableImages.length > 0 ? (
+            <Image
+              src={availableImages[imgIndex]}
+              alt={name}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onError={handleImageError}
+              className="object-cover hover:scale-105 transition duration-300"
+            />
+          ) : (
+            /* Minimalist Serving Cloche / Platter Icon Fallback */
+            <div className="flex flex-col items-center justify-center w-full h-full bg-slate-900/80 text-[#d97706]">
+              <svg
+                className="w-12 h-12 mb-2"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 18.75H3m18 0a1.5 1.5 0 01-1.5 1.5H4.5A1.5 1.5 0 013 18.75m18 0v-3.75a6 6 0 00-6-6h-6a6 6 0 00-6 6v3.75m12 0H9"
+                />
+              </svg>
+              <span className="text-xs uppercase tracking-wider font-medium text-slate-400">Spice & Ember</span>
+            </div>
+          )}
         </div>
 
         <div className="flex justify-between items-start gap-2">
