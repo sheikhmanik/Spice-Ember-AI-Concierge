@@ -1,0 +1,17 @@
+{
+  "name": "Spice & Ember Woodfired Kitchen",
+  "short_name": "Spice & Ember",
+  "description": "Experience authentic culinary artistry with slow-roasted woodfired dishes. Chat live with Ember, our AI concierge, for menu recommendations and reservations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c0f17",
+  "theme_color": "#d97706",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

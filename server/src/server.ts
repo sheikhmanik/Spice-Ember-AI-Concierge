@@ -10,6 +10,7 @@ app.register(cors, {
   origin: true, // Allows requests from Vercel frontend and local development
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
 });
 
 

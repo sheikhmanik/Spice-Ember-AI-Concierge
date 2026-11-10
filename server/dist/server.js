@@ -13,6 +13,7 @@ app.register(cors_1.default, {
     origin: true, // Allows requests from Vercel frontend and local development
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
 });
 app.register(menu_routes_1.menuRoutes);
 app.register(chat_routes_1.chatRoutes);
