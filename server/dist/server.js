@@ -19,11 +19,12 @@ app.register(chat_routes_1.chatRoutes);
 app.get("/", async () => {
     return { message: "Server is running 🚀" };
 });
+const PORT = Number(process.env.PORT) || 4000;
+const HOST = '0.0.0.0';
 const start = async () => {
     try {
-        const port = parseInt(process.env.PORT || "4000", 10);
-        await app.listen({ port, host: "0.0.0.0" });
-        console.log("🚀 http://localhost:" + port);
+        await app.listen({ port: PORT, host: HOST });
+        console.log(`🚀 http://${HOST}:${PORT}`);
     }
     catch (error) {
         app.log.error(error);
