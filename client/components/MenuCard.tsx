@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
+
+const PLACEHOLDER_IMAGE = "/images/placeholders/food-placeholder.jpg";
 
 interface MenuItem {
   id: string;
@@ -34,42 +37,30 @@ export function MenuCard({
   ];
 
   const [imgIndex, setImgIndex] = useState(0);
-  const [hasError, setHasError] = useState(false);
+  const [imgSrc, setImgSrc] = useState(availableImages[0] || PLACEHOLDER_IMAGE);
 
   const handleImageError = () => {
     if (imgIndex < availableImages.length - 1) {
-      setImgIndex(prev => prev + 1); // Try next image in the array
-    } else {
-      setHasError(true); // If all images fail, trigger the dummy food icon fallback
+      const nextIndex = imgIndex + 1;
+      setImgIndex(nextIndex); // Try next image in the array
+      setImgSrc(availableImages[nextIndex]);
+    } else if (imgSrc !== PLACEHOLDER_IMAGE) {
+      setImgSrc(PLACEHOLDER_IMAGE); // If all images fail, fall back to the placeholder image
     }
   };
 
   return (
     <div className="p-5 bg-slate-900/60 rounded-xl border border-slate-800 flex flex-col justify-between gap-4 hover:border-amber-500/30 transition shadow-lg">
       <div className="space-y-3">
-        <div className="aspect-video rounded-lg bg-slate-800/80 flex items-center justify-center overflow-hidden border border-slate-700/50">
-          {!hasError && availableImages.length > 0 ? (
-            <img 
-              src={availableImages[imgIndex]} 
-              alt={name} 
-              onError={handleImageError}
-              className="w-full h-full object-cover hover:scale-105 transition duration-300"
-            />
-          ) : (
-            /* Professional Dummy Food Icon (Fork, Knife & Plate) */
-            <div className="flex flex-col items-center justify-center gap-2 text-slate-500 select-none">
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="w-12 h-12 stroke-current opacity-60" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                strokeWidth="1.5"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-              </svg>
-              <span className="text-[11px] font-medium uppercase tracking-wider text-slate-400">Fresh Culinary Item</span>
-            </div>
-          )}
+        <div className="relative aspect-video rounded-lg bg-slate-800/80 overflow-hidden border border-slate-700/50">
+          <Image
+            src={imgSrc}
+            alt={name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onError={handleImageError}
+            className="object-cover hover:scale-105 transition duration-300"
+          />
         </div>
 
         <div className="flex justify-between items-start gap-2">
