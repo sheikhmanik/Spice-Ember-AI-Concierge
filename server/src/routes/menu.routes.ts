@@ -23,11 +23,20 @@ interface MenuData {
 }
 
 function getMenuData(): MenuData {
-  // Use __dirname to resolve path relative to this file,
-  // ensuring consistent behavior across local and production (Render)
-  const menuPath = path.join(__dirname, "../data/menu.json");
-  const raw = fs.readFileSync(menuPath, "utf8");
-  return JSON.parse(raw);
+  // Resolves relative to the server project root regardless of src vs dist compilation
+  const possiblePaths = [
+    path.join(process.cwd(), 'src/data/menu.json'),
+    path.join(process.cwd(), 'data/menu.json'),
+    path.join(__dirname, '../data/menu.json')
+  ];
+
+  for (const p of possiblePaths) {
+    if (fs.existsSync(p)) {
+      return JSON.parse(fs.readFileSync(p, 'utf-8'));
+    }
+  }
+
+  throw new Error(`menu.json could not be located in any known path from ${process.cwd()}`);
 }
 
 export async function menuRoutes(app: FastifyInstance) {
