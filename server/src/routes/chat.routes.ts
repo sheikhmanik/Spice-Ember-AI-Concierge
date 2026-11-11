@@ -40,7 +40,25 @@ interface RestaurantInfo {
 }
 
 // Load JSON data files dynamically so Ember never suggests items that aren't on the menu.
-const DATA_DIR = path.join(__dirname, "..", "data");
+// Use robust path resolution that works in both src/ and dist/ (production) environments.
+function getDataDir(): string {
+  const possiblePaths = [
+    path.join(process.cwd(), 'src/data'),
+    path.join(process.cwd(), 'data'),
+    path.join(__dirname, '../data')
+  ];
+  
+  for (const p of possiblePaths) {
+    if (fs.existsSync(p)) {
+      return p;
+    }
+  }
+  
+  // Fallback to __dirname-based path
+  return path.join(__dirname, '../data');
+}
+
+const DATA_DIR = getDataDir();
 const MENU_PATH = path.join(DATA_DIR, "menu.json");
 const INFO_PATH = path.join(DATA_DIR, "restaurant_info.json");
 
@@ -52,9 +70,6 @@ function loadJson<T>(filePath: string): T | null {
     return null;
   }
 }
-
-const menuData = loadJson<{ items: MenuItem[] }>(MENU_PATH);
-const infoData = loadJson<RestaurantInfo>(INFO_PATH);
 
 // Fallback quick-reference strings used only if the JSON files are unavailable at runtime.
 const FALLBACK_MENU_QUICKREF = `
@@ -74,23 +89,28 @@ const FALLBACK_RESTAURANT_INFO = `RESTAURANT INFO:
 - Signature Dishes: Hyderabadi Dum Biryani (₹580), Dal Makhani (₹420), Tandoori Tiger Prawns (₹680), Woodfired Lamb Rogan Josh (₹720), Tandoori Butter Chicken (₹650).`;
 
 // Build the menu quick-reference dynamically from menu.json so it always matches the actual menu.
-const menuQuickRef = menuData
-  ? menuData.items
-      .map((item) => `- ${item.name} (${item.category}) - ₹${item.price} (${item.dietary})`)
-      .join("\n")
-  : FALLBACK_MENU_QUICKREF;
+// This is called per-request to ensure the system prompt always reflects the current menu.json.
+function getMenuQuickRef(): string {
+  const data = loadJson<{ items: MenuItem[] }>(MENU_PATH);
+  if (!data) return FALLBACK_MENU_QUICKREF;
+  return data.items
+    .map((item) => `- ${item.name} (${item.category}) - ₹${item.price} (${item.dietary})`)
+    .join("\n");
+}
 
 // Build the restaurant info quick-reference dynamically from restaurant_info.json.
-const restaurantInfoQuickRef = infoData
-  ? [
-      `RESTAURANT INFO:`,
-      `- Hours: Mon-Fri ${infoData.restaurant.hours.monday_to_friday} | Sat-Sun ${infoData.restaurant.hours.saturday_sunday}`,
-      `- Delivery & Takeaway: ${infoData.restaurant.delivery_and_takeaway.delivery_radius}. ${infoData.restaurant.delivery_and_takeaway.minimum_order}. Estimated time: ${infoData.restaurant.delivery_and_takeaway.estimated_time}.`,
-      `- Reservations: ${infoData.restaurant.reservation_policy.advance_booking}. ${infoData.restaurant.reservation_policy.cancellation}. Call directly for groups > 8.`,
-      `- Location: ${infoData.restaurant.location.address} (${infoData.restaurant.location.phone}).`,
-      `- Signature Dishes: ${infoData.restaurant.chef_specials_and_pairing.signature_dishes.join(", ")}.`,
-    ].join("\n")
-  : FALLBACK_RESTAURANT_INFO;
+function getRestaurantInfoQuickRef(): string {
+  const data = loadJson<RestaurantInfo>(INFO_PATH);
+  if (!data) return FALLBACK_RESTAURANT_INFO;
+  return [
+    `RESTAURANT INFO:`,
+    `- Hours: Mon-Fri ${data.restaurant.hours.monday_to_friday} | Sat-Sun ${data.restaurant.hours.saturday_sunday}`,
+    `- Delivery & Takeaway: ${data.restaurant.delivery_and_takeaway.delivery_radius}. ${data.restaurant.delivery_and_takeaway.minimum_order}. Estimated time: ${data.restaurant.delivery_and_takeaway.estimated_time}.`,
+    `- Reservations: ${data.restaurant.reservation_policy.advance_booking}. ${data.restaurant.reservation_policy.cancellation}. Call directly for groups > 8.`,
+    `- Location: ${data.restaurant.location.address} (${data.restaurant.location.phone}).`,
+    `- Signature Dishes: ${data.restaurant.chef_specials_and_pairing.signature_dishes.join(", ")}.`,
+  ].join("\n");
+}
 
 export async function chatRoutes(app: FastifyInstance) {
   app.post("/api/chat", async (req: FastifyRequest<{ Body: ChatRequestBody }>, reply: FastifyReply) => {
@@ -119,7 +139,7 @@ export async function chatRoutes(app: FastifyInstance) {
         .join("\n");
 
       // 2. Comprehensive Menu Quick-Reference (built dynamically from menu.json)
-      const menuQuickRefStr = menuQuickRef.trim();
+      const menuQuickRefStr = getMenuQuickRef().trim();
 
       // 3. Ultra-Precise System Prompt
       const systemPrompt = `You are Ember, the receptionist at Spice & Ember restaurant.
@@ -127,7 +147,7 @@ export async function chatRoutes(app: FastifyInstance) {
 MASTER MENU REFERENCE:
 ${menuQuickRefStr}
 
-${restaurantInfoQuickRef}
+${getRestaurantInfoQuickRef()}
 
 RELEVANT SEARCH DETAILS:
 ${searchContext}

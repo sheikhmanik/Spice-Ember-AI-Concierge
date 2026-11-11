@@ -53,7 +53,21 @@ export class VectorStore {
     this.idf.clear();
     this.menuItems.clear();
 
-    const dataDir = path.join(__dirname, "../data");
+    // Use robust path resolution that works in both src/ and dist/ (production) environments.
+    const possiblePaths = [
+      path.join(process.cwd(), 'src/data'),
+      path.join(process.cwd(), 'data'),
+      path.join(__dirname, '../data')
+    ];
+    
+    let dataDir = path.join(__dirname, '../data');
+    for (const p of possiblePaths) {
+      if (fs.existsSync(p)) {
+        dataDir = p;
+        break;
+      }
+    }
+    
     const menuPath = path.join(dataDir, "menu.json");
     const infoPath = path.join(dataDir, "restaurant_info.json");
 
